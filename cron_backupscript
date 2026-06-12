@@ -1,0 +1,2 @@
+x x * * * tmsh save /sys ucs /var/local/ucs/$(/bin/hostname)-$(date +\%Y-\%m-\%d).ucs && scp -o BindAddress=$(tmsh -q -c "list sys management-ip one-line" | awk '{print $3}' | cut -d/ -f1) /var/local/ucs/$(/bin/hostname)-$(date +\%Y-\%m-\%d).ucs <user>@><backupserver>:<path>/hostname)-$(/bin/date +\%Y-\%m-\%d).ucs
+x x * * * rm /var/local/ucs/$(hostname)*.ucs
