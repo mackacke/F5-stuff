@@ -1,6 +1,7 @@
 # Adds cron configuration directories to UCS backups.
 # Remounts /usr RW, updates configsync cs.dat, and restores /usr RO.
 # Includes progress output for easier troubleshooting.
+# ssh <user>@tenant 'bash -s' < save_cron_to_ucs.bash
 #!/bin/bash
 
 set -e
